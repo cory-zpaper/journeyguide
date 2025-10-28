@@ -5,12 +5,12 @@
 
 set -e
 
-# Configuration - UPDATE THESE VALUES
-AWS_REGION="YOUR_REGION"
-AWS_ACCOUNT_ID="YOUR_ACCOUNT_ID"
+# Configuration
+AWS_REGION="us-west-2"
+AWS_ACCOUNT_ID="347277718006"
 ECR_REPOSITORY="journeyguide"
-ECS_CLUSTER="YOUR_CLUSTER_NAME"
-ECS_SERVICE="journeyguide"
+ECS_CLUSTER="sprkzdoc-cluster-dev"
+ECS_SERVICE="journeyguide-service"
 
 # Get version from argument or use 'latest'
 VERSION=${1:-latest}

@@ -1,5 +1,5 @@
 {
-  "Priority": 10,
+  "Priority": 25,
   "Conditions": [
     {
       "Field": "host-header",
@@ -9,7 +9,7 @@
   "Actions": [
     {
       "Type": "forward",
-      "TargetGroupArn": "arn:aws:elasticloadbalancing:YOUR_REGION:YOUR_ACCOUNT_ID:targetgroup/journeyguide/YOUR_TG_ID"
+      "TargetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:347277718006:targetgroup/journeyguide-tg/1aa9b6bd30dfbf6d"
     }
   ]
 }

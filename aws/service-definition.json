@@ -1,25 +1,24 @@
 {
-  "serviceName": "journeyguide",
-  "cluster": "YOUR_CLUSTER_NAME",
-  "taskDefinition": "journeyguide",
+  "serviceName": "journeyguide-service",
+  "cluster": "sprkzdoc-cluster-dev",
+  "taskDefinition": "journeyguide-task",
   "desiredCount": 2,
   "launchType": "FARGATE",
   "platformVersion": "LATEST",
   "networkConfiguration": {
     "awsvpcConfiguration": {
       "subnets": [
-        "subnet-YOUR_SUBNET_1",
-        "subnet-YOUR_SUBNET_2"
+        "subnet-04e7c9f5e1d54ddd0"
       ],
       "securityGroups": [
-        "sg-YOUR_SECURITY_GROUP"
+        "sg-07a0a4b47585a827a"
       ],
-      "assignPublicIp": "DISABLED"
+      "assignPublicIp": "ENABLED"
     }
   },
   "loadBalancers": [
     {
-      "targetGroupArn": "arn:aws:elasticloadbalancing:YOUR_REGION:YOUR_ACCOUNT_ID:targetgroup/journeyguide/YOUR_TG_ID",
+      "targetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:347277718006:targetgroup/journeyguide-tg/1aa9b6bd30dfbf6d",
       "containerName": "journeyguide",
       "containerPort": 80
     }
