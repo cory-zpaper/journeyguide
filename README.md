@@ -52,9 +52,41 @@ npm run preview
 - `index.html` - Includes the pdf-viewer library script
 - `vite.config.js` - Vite configuration
 
+## Deployment
+
+This application is deployed to AWS ECS (Fargate) and accessible at:
+**https://journey.dev.sprkzdoc.com/**
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+### Quick Deploy
+
+```bash
+# Update configuration in deploy.sh first
+./deploy.sh [version]
+```
+
+### Docker
+
+Build and run locally with Docker:
+
+```bash
+# Build
+docker build -t journeyguide .
+
+# Run
+docker run -p 8080:80 journeyguide
+```
+
+Visit `http://localhost:8080` to view the app.
+
 ## Technologies
 
 - React 18
 - React Router DOM
 - Vite
+- Nginx (for production serving)
+- Docker
+- AWS ECS (Fargate)
+- AWS ALB
 - SparkzDoc PDF Viewer

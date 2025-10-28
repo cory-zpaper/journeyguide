@@ -1,0 +1,15 @@
+{
+  "Priority": 10,
+  "Conditions": [
+    {
+      "Field": "host-header",
+      "Values": ["journey.dev.sprkzdoc.com"]
+    }
+  ],
+  "Actions": [
+    {
+      "Type": "forward",
+      "TargetGroupArn": "arn:aws:elasticloadbalancing:YOUR_REGION:YOUR_ACCOUNT_ID:targetgroup/journeyguide/YOUR_TG_ID"
+    }
+  ]
+}
